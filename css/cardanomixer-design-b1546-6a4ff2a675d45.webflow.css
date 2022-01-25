@@ -642,6 +642,10 @@ a {
   text-align: center;
 }
 
+.parwide {
+  font-family: Corbel, sans-serif;
+}
+
 @media screen and (max-width: 991px) {
   .container {
     margin-top: 0vw;
@@ -687,6 +691,8 @@ a {
   .headred {
     margin-top: 20px;
     margin-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
     font-size: 32px;
   }
 
@@ -844,6 +850,11 @@ a {
   .image-24 {
     margin-top: -83px;
   }
+
+  .parwide {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -876,8 +887,8 @@ a {
   }
 
   .parbig {
-    padding-right: 0px;
-    padding-left: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
     text-align: center;
   }
 
@@ -922,6 +933,11 @@ a {
 
   .header-center-box._75 {
     width: 90%;
+  }
+
+  .accordion-heading {
+    padding-right: 0px;
+    padding-left: 10px;
   }
 
   .linknetwork {
