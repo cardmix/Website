@@ -403,10 +403,6 @@ a {
     margin-left: 20px;
   }
 
-  .sectionfooter {
-    background-color: #333;
-  }
-
   .maincontainer.shifted {
     padding-right: 20px;
     padding-left: 20px;
@@ -569,6 +565,8 @@ a {
   }
 
   .accordion-item {
+    margin-right: 10px;
+    margin-left: 10px;
     padding-right: 0px;
     padding-left: 0px;
   }
@@ -590,6 +588,10 @@ a {
 
   .pictogram {
     max-width: 30px;
+  }
+
+  .parwide {
+    overflow: auto;
   }
 
   .bold-text-4 {
