@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Mon Feb 14 2022 22:13:44 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Sat Feb 19 2022 13:52:54 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="61f41eec9441d0236bec1acb" data-wf-site="61f41eec9441d011d2ec1aca">
 <head>
   <meta charset="utf-8">
@@ -18,19 +18,25 @@
   <script defer="" language="javascript" src="calculator/rts.js"></script>
   <script defer="" language="javascript" src="calculator/lib.js"></script>
   <script defer="" language="javascript" src="calculator/out.js"></script>
+  <script defer="" language="javascript" src="js/themeSwitcher.js"></script>
 </head>
 <body class="body">
   <div class="wf-section">
     <div data-animation="default" data-collapse="small" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
-      <div class="w-container">
-        <nav role="navigation" class="w-nav-menu">
-          <a href="#HDIW" class="nav-link w-nav-link">How does it work?</a>
-          <a href="#Features" class="nav-link w-nav-link">Features</a>
-          <a href="#FAQ" class="nav-link w-nav-link">FAQ</a>
-          <a href="https://cardmix.io/whitepaper.pdf" target="_blank" class="nav-link w-nav-link">White paper</a>
-        </nav><img src="images/Mainlogo.svg" loading="lazy" width="45" alt="" class="imagelightdark">
-        <div class="w-nav-button">
-          <div class="icon w-icon-nav-menu"></div>
+      <div class="container w-container">
+        <div class="columns-3 w-row">
+          <div class="w-col w-col-3"><img src="images/light_dark_theme.svg" loading="lazy" width="45" id="switcher-icon" alt="" class="imagelightdark"></div>
+          <div class="w-col w-col-9">
+            <div class="menu-button w-nav-button">
+              <div class="icon w-icon-nav-menu"></div>
+            </div>
+            <nav role="navigation" class="nav-menu w-nav-menu">
+              <a href="#HDIW" class="nav-link w-nav-link">How does it work?</a>
+              <a href="#Features" class="nav-link w-nav-link">Features</a>
+              <a href="#FAQ" class="nav-link w-nav-link">FAQ</a>
+              <a href="https://cardmix.io/whitepaper.pdf" target="_blank" class="nav-link w-nav-link">White paper</a>
+            </nav>
+          </div>
         </div>
       </div>
     </div>
@@ -105,7 +111,7 @@
   <div class="sectionprivacy wf-section">
     <div class="maincontainer shifted w-container">
       <h2 class="headingsection">How do we achieve privacy?</h2>
-      <div class="w-row">
+      <div class="columns-2 w-row">
         <div class="w-col w-col-6">
           <div class="div-block-5"><img src="images/main2_r.svg" loading="lazy" width="404" alt="" class="imagehowdoweachieveprivacy"></div>
         </div>

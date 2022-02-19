@@ -25,9 +25,15 @@ a {
   text-decoration: underline;
 }
 
+.body.lightthemebody {
+  background-color: transparent;
+  color: #343434;
+}
+
 .navbar {
   margin-top: 10px;
   background-color: transparent;
+  color: #fff;
 }
 
 .headingsection {
@@ -110,7 +116,6 @@ a {
   -ms-flex: 0 auto;
   flex: 0 auto;
   font-family: Corbel, sans-serif;
-  color: #fff;
   font-size: 14px;
   line-height: 28px;
   text-align: justify;
@@ -149,6 +154,10 @@ a {
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.03);
 }
 
+.accordion-item.lightthemeaccordion {
+  background-color: #fdf6f4;
+}
+
 .content-wrapper {
   max-width: 1140px;
   margin-right: auto;
@@ -179,7 +188,6 @@ a {
   -ms-flex: 1;
   flex: 1;
   font-family: Stark, sans-serif;
-  color: #fff;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -203,6 +211,10 @@ a {
   font-size: 32px;
   line-height: 30px;
   cursor: pointer;
+}
+
+.iconarrow.accordion-icon.lightthemearrow {
+  color: #656667;
 }
 
 .image-16 {
@@ -257,8 +269,21 @@ a {
   color: #b21533;
 }
 
+.nav-link.lightthemenavlink {
+  color: #343434;
+}
+
+.nav-link.lightthemenavlink:hover {
+  color: #b21533;
+}
+
 .pictogram {
   text-align: center;
+}
+
+.pictogram.lightthemepictogram {
+  -webkit-filter: invert(75%);
+  filter: invert(75%);
 }
 
 .inactive-link-block {
@@ -278,8 +303,16 @@ a {
   box-shadow: 0 0 18px 0 #000;
 }
 
+.mainbutton.lightthememainbutton {
+  background-color: #fdf6f4;
+}
+
 .link {
   color: #c2c2c2;
+}
+
+.link.lightthemelink {
+  color: #b21533;
 }
 
 .divblock {
@@ -322,13 +355,37 @@ a {
 }
 
 .imagelightdark {
-  display: none;
-  padding-top: 10px;
+  display: block;
+  padding-top: 0px;
+  cursor: pointer;
+}
+
+.imagelightdark.lightthemeimagelightdark {
+  -webkit-filter: invert(75%);
+  filter: invert(75%);
 }
 
 .divcalculatorwrapper {
   overflow: auto;
   min-height: 50px;
+}
+
+.container {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.columns-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 991px) {
@@ -411,6 +468,11 @@ a {
     color: #bcbcbc;
   }
 
+  .icon.lightthemeicon {
+    -webkit-filter: invert(75%);
+    filter: invert(75%);
+  }
+
   .accordion-item-content {
     margin-right: 0px;
   }
@@ -460,7 +522,7 @@ a {
 
   .imagelightdark {
     max-width: 100%;
-    padding-top: 15px;
+    padding-top: 0px;
     padding-left: 20px;
   }
 }
@@ -549,8 +611,9 @@ a {
   }
 
   .imagelightdark {
+    display: inline-block;
     max-width: 40%;
-    padding-top: 15px;
+    padding-top: 0px;
   }
 }
 
