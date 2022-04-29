@@ -10,17 +10,25 @@ function setInputValue(elId, val) {
 };
 
 function namiIsEnabled(elId) {
+  if ((typeof window.cardano === 'undefined') || (typeof window.cardano.nami === 'undefined')) {
+    setInputValue(elId, false);
+  }
+  else{
   window.cardano.nami.isEnabled().then(
     (val) => { setInputValue(elId, val); },
     (val) => { setInputValue(elId, false); }
-  );
+  );}
 };
 
 function namiEnable(elId) {
+  if ((typeof window.cardano === 'undefined') || (typeof window.cardano.nami === 'undefined')) {
+    setInputValue(elId, false);
+  }
+  else{
   window.cardano.nami.enable().then(
     (val) => { setInputValue(elId, true); },
     (val) => { setInputValue(elId, false); }
-  );
+  );}
 };
 
 function namiGetNetworkId(elId) {
