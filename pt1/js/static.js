@@ -52,7 +52,10 @@ function autofillAddr(elId) {
   return abc.load()
     .then(() => {
       const CardanoWasm = abc.Cardano
-      window.cardano.enable();
+      if ((typeof window.cardano === 'undefined') || (typeof window.cardano.nami === 'undefined')) {
+      }
+      else {
+      window.cardano.nami.enable();
       var p = Promise.all([window.cardano.getUsedAddresses(), window.cardano.getUnusedAddresses()]);
       p.then(([walletUsedAddresses, walletUnusedAddresses]) =>
         {
@@ -61,7 +64,7 @@ function autofillAddr(elId) {
             const address = CardanoWasm.Address.from_bytes(fromHexString(addresses[0])).to_bech32()
             setInputValue(elId, address);
           };
-        });
+        });}
       })
 };
 
