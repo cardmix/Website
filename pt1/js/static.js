@@ -56,7 +56,7 @@ function autofillAddr(elId) {
       }
       else {
       window.cardano.nami.enable();
-      var p = Promise.all([window.cardano.nami.getUsedAddresses(), window.cardano.nami.getUnusedAddresses()]);
+      var p = Promise.all([window.cardano.getUsedAddresses(), window.cardano.getUnusedAddresses()]);
       p.then(([walletUsedAddresses, walletUnusedAddresses]) =>
         {
           const addresses = walletUnusedAddresses.concat(walletUsedAddresses)
