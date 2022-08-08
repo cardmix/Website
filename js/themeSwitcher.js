@@ -38,4 +38,16 @@ function themeSwitcher() {
   {
   	pictograms[i].classList.toggle("lightthemepictogram");
   }
+    
+  var backgroundgradient = document.getElementsByClassName("backgroundgradient");
+  for (i=0; i < backgroundgradient.length; i++)
+  {
+        backgroundgradient[i].classList.toggle("lightthemebackgroundgradient");
+  }
+    
+  var imagesalut = document.getElementsByClassName("imagesalut");
+  for (i=0; i < imagesalut.length; i++)
+  {
+        imagesalut[i].classList.toggle("lightthemeimagesalut");
+  }
 }
