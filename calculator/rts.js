@@ -4537,44 +4537,6 @@ function h$follow(obj, sp) {
             } else if(typeof c.len === 'number' && c.buf instanceof ArrayBuffer) {
                 ;
                 if(typeof c.m === 'number') c.m = (c.m&-4)|mark; else c.m.m = (c.m.m & -4)|mark;;
-            } else if(c instanceof h$FastWeak) {
-              if(typeof c.m === 'number') c.m = (c.m&-4)|mark; else c.m.m = (c.m.m & -4)|mark;;
-              if(c.ticket !== null && !((typeof c.ticket.m === 'number' && (c.ticket.m & 3) === mark) || (typeof c.ticket.m === 'object' && ((c.ticket.m.m & 3) === mark)))) {
-                c.ticket = null;
-              }
-            } else if(c instanceof h$FastWeakTicket) {
-              if(typeof c.m === 'number') c.m = (c.m&-4)|mark; else c.m.m = (c.m.m & -4)|mark;;
-              if(!((typeof c.val.m === 'number' && (c.val.m & 3) === mark) || (typeof c.val.m === 'object' && ((c.val.m.m & 3) === mark)))) {
-                work[w++] = c.val;;
-              }
-              if(((typeof c.weak.m === 'number' && (c.weak.m & 3) === mark) || (typeof c.weak.m === 'object' && ((c.weak.m.m & 3) === mark)))) {
-                c.weak.ticket = c;
-              }
-            } else if(c instanceof h$FastWeakBag) {
-              if(typeof c.m === 'number') c.m = (c.m&-4)|mark; else c.m.m = (c.m.m & -4)|mark;;
-              var j = 0;
-              for(i = 0; i < c.tickets.length; i++) {
-                if(c.tickets[i] !== null) {
-                  if(j !== i) {
-                    c.tickets[i].pos = j;
-                  }
-                  if(!((typeof c.tickets[i].m === 'number' && (c.tickets[i].m & 3) === mark) || (typeof c.tickets[i].m === 'object' && ((c.tickets[i].m.m & 3) === mark)))) {
-                    c.tickets[j] = null;
-                  } else if(j !== i) {
-                    c.tickets[j] = c.tickets[i];
-                  }
-                  j++;
-                }
-              }
-              c.tickets.length = j;
-            } else if(c instanceof h$FastWeakBagTicket) {
-              if(typeof c.m === 'number') c.m = (c.m&-4)|mark; else c.m.m = (c.m.m & -4)|mark;;
-              if(!((typeof c.val.m === 'number' && (c.val.m & 3) === mark) || (typeof c.val.m === 'object' && ((c.val.m.m & 3) === mark)))) {
-                work[w++] = c.val;;
-              }
-              if(((typeof c.bag.m === 'number' && (c.bag.m & 3) === mark) || (typeof c.bag.m === 'object' && ((c.bag.m.m & 3) === mark)))) {
-                c.bag.tickets[c.pos] = c;
-              }
             } else if(c instanceof h$Weak) {
                 if(typeof c.m === 'number') c.m = (c.m&-4)|mark; else c.m.m = (c.m.m & -4)|mark;;
             } else if(c instanceof h$MVar) {
@@ -6293,26 +6255,6 @@ function h$finalizeWeak(w) {
         { h$ret1 = (1); return (r); };
     }
 }
-function h$FastWeak(ticket) {
-  this.ticket = ticket;
-  this.m = 0;
-}
-function h$FastWeakTicket(val) {
-  this.val = val;
-  this.weak = new h$FastWeak(this);
-  this.m = 0;
-}
-function h$FastWeakBag() {
-  this.tickets = [];
-  this.m = 0;
-}
-function h$FastWeakBagTicket(bag, val) {
-  this.val = val;
-  this.bag = bag;
-  this.pos = bag.tickets.length;
-  bag.tickets.push(this);
-  this.m = 0;
-};
 var h$threadIdN = 0;
 var h$threads = new h$Queue();
 var h$blocked = new h$Set();
